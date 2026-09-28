@@ -1,0 +1,38 @@
+
+
+How to get values of the current chunk the player is in.
+
+Simply include chunks.h
+
+and use
+
+CHUNKS[Location].WhateverChunkDataYouWantHere
+
+
+for the inventory vectors never let them go above their maximum limit.
+
+
+in the code where the vectors are made they will have a limit comment like this
+
+
+// MAXIMUM 3
+
+
+so to do this simply make an if statement that checks if the vector is above its max and if it is not then you add a weapon like this weapon_slots[0] = default_sword;
+
+
+
+for the vector weapon_slots in the initalize weapons function it
+
+adds 3 swords to the weapon slots.
+
+
+the idea behind weapon_slots is that you have 3 slots that can be filled with a weapon
+
+so if you were to pick up a bow you would prompt the player asking it which slot
+
+to fill up and when the player answers by pressing either 1 or 2 or 3 then you can run
+
+weapons_slots[Whatever_Number_The_Player_Picked] = bow;
+
+that will update the weapon_slots and remove the previous weapon that the player had in the selected slot.
