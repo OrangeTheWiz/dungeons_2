@@ -30,8 +30,6 @@ void MakeChunk(std::string PositionString, int x, int y)
      ChunkInstance.x = x;
      ChunkInstance.y = y;
 
-     Chunks.erase("0 0");
-     std::cout << "Removed last chunk.\n";
      Chunks[PositionString] = ChunkInstance;
      std::cout << "MADE CHUNK\n";
 
@@ -40,7 +38,17 @@ void MakeChunk(std::string PositionString, int x, int y)
 
 void ChunkGenerationLoopFunction()
 {
-    LOCATION = "0 0";
+    LOCATION = ChunkCoordinatesToString(ChunkX, ChunkY);
+
+    if (Chunks.count(LOCATION) > 0)
+    {
+        std::cout << "gg\n";
+    }
+    else
+    {
+        MakeChunk(LOCATION, ChunkX, ChunkY);
+    }
+
     std::cout << Chunks[LOCATION].number << '\n';
     std::string num_value = std::to_string(Chunks[LOCATION].number);
     const char* num_value_two = num_value.c_str();
