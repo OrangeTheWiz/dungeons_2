@@ -5,7 +5,8 @@
 
 int ChunkX = 0;
 int ChunkY = 0;
-
+int OldChunkX = 0;
+int OldChunkY = 0;
 
 std::string LOCATION;
 
@@ -36,18 +37,29 @@ void MakeChunk(std::string PositionString, int x, int y)
 }
 
 
-void ChunkGenerationLoopFunction()
+void SnapToValidChunks()
 {
+
     LOCATION = ChunkCoordinatesToString(ChunkX, ChunkY);
 
     if (Chunks.count(LOCATION) > 0)
     {
-        std::cout << "gg\n";
+        OldChunkX = ChunkX;
+        OldChunkY = ChunkY;
     }
     else
     {
-        MakeChunk(LOCATION, ChunkX, ChunkY);
+      ChunkX = OldChunkX;
+      ChunkY = OldChunkY;
     }
+
+
+}
+
+
+void ChunkGenerationLoopFunction()
+{
+    LOCATION = ChunkCoordinatesToString(ChunkX, ChunkY);
 
     std::cout << Chunks[LOCATION].number << '\n';
     std::string num_value = std::to_string(Chunks[LOCATION].number);

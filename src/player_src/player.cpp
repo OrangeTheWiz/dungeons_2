@@ -18,4 +18,7 @@ void PlayerMovement()
  if (RelativeX <= -1) { RelativeX = 500; ChunkX -= 1; }
  if (RelativeY >= 500) { RelativeY = 0; ChunkY += 1; }
  if (RelativeY <= -1) { RelativeY = 500; ChunkY -= 1; }
+
+ SnapToValidChunks();
+
 }
