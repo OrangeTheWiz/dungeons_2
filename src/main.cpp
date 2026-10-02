@@ -16,9 +16,9 @@
 
 int main()
 {
-   MakeChunk("0 0", 0, 0);
+   GenerateRoom();
 
-   InitWindow(500, 500, "procedural generation");
+   InitWindow(700, 700, "procedural generation");
    SetTargetFPS(60);
 
    while (!WindowShouldClose())
@@ -27,8 +27,7 @@ int main()
        ClearBackground(GREEN);
        PlayerMovement();
 
-       ChunkGenerationLoopFunction();
-
+       ChunkInfoDisplay();
 
        EndDrawing();
    }

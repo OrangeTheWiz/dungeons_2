@@ -5,7 +5,7 @@
 
 int RelativeX = 0;
 int RelativeY = 0;
-int PlayerSpeed = 5000;
+int PlayerSpeed = 700;
 
 void PlayerMovement()
 {
@@ -14,9 +14,9 @@ void PlayerMovement()
  if (IsKeyDown(KEY_A)) { RelativeX -= PlayerSpeed * GetFrameTime(); }
  if (IsKeyDown(KEY_D)) { RelativeX += PlayerSpeed * GetFrameTime(); }
 
- if (RelativeX >= 500) { RelativeX = 0; ChunkX += 1; }
+ if (RelativeX >= 700) { RelativeX = 0; ChunkX += 1; }
  if (RelativeX <= -1) { RelativeX = 500; ChunkX -= 1; }
- if (RelativeY >= 500) { RelativeY = 0; ChunkY += 1; }
+ if (RelativeY >= 700) { RelativeY = 0; ChunkY += 1; }
  if (RelativeY <= -1) { RelativeY = 500; ChunkY -= 1; }
 
  SnapToValidChunks();

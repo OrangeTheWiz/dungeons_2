@@ -36,3 +36,24 @@ to fill up and when the player answers by pressing either 1 or 2 or 3 then you c
 weapons_slots[Whatever_Number_The_Player_Picked] = bow;
 
 that will update the weapon_slots and remove the previous weapon that the player had in the selected slot.
+
+
+
+
+
+
+to use the MakeChunk function you have to make a std::string variable and set it to ChunkCoordinatesToString(int x, int y);
+
+and the you can fill in the same arguments to ChunkCoordinatesToString into MakeChunk
+
+an example is as follows:
+
+std::string position;
+position = ChunkCoordinatesToString(someX, someY);
+
+MakeChunk(position, someX, someY);
+
+
+
+
+end of example

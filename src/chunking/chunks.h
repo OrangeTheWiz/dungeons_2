@@ -25,7 +25,9 @@ extern std::string ChunkCoordinatesToString(int X, int Y);
 
 extern void MakeChunk(std::string PositionString, int x, int y);
 
-extern void ChunkGenerationLoopFunction();
+extern void GenerateRoom();
+
+extern void ChunkInfoDisplay();
 
 extern void SnapToValidChunks();
 
