@@ -1,3 +1,41 @@
+TEXTURES
+TEXTURES
+TEXTURES
+
+for textures to add an image you put a png into the assets folders and then you 
+
+add in the init textures function 
+
+Texture2D something = LoadTexture("./whatever.png");
+Textures.push_back(something)
+
+
+and then at the part of init textures that says de init textures
+
+you add
+
+UnloadTexture(something);
+
+so that the only texture that is in memory is the one in the textures vector
+
+
+
+
+
+
+index 0 at Textures included from assets/assets.h is dagger.png
+
+
+
+
+
+ENDOFTEXTURES
+ENDOFTEXTURES
+ENDOFTEXTURES
+
+
+
+
 
 
 How to get values of the current chunk the player is in.
@@ -17,9 +55,7 @@ in the code where the vectors are made they will have a limit comment like this
 
 // MAXIMUM 3
 
-
-so to do this simply make an if statement that checks if the vector is above its max and if it is not then you add a weapon like this weapon_slots[0] = default_sword;
-
+to add a weapon simply use weapon_slots[Index] = someweapon to change the index of the weapon slots to a specific weapon
 
 
 for the vector weapon_slots in the initalize weapons function it

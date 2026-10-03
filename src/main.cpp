@@ -4,7 +4,7 @@
 #include <string>
 #include "chunking/chunks.h"
 #include "player_src/player.h"
-
+#include "assets/assets.h"
 
 
 
@@ -16,6 +16,7 @@
 
 int main()
 {
+   InitTextures();
    GenerateRoom();
 
    InitWindow(700, 700, "procedural generation");
@@ -32,8 +33,9 @@ int main()
        EndDrawing();
    }
 
-   CloseWindow();
+   DeInitTextures();
 
+   CloseWindow();
 
 
 
