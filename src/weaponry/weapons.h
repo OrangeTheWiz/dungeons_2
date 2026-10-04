@@ -3,7 +3,7 @@
 #include <vector>
 
 
-
+extern void WeaponsInit();
 
 struct weapon
 {

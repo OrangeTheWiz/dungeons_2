@@ -2,9 +2,9 @@ TEXTURES
 TEXTURES
 TEXTURES
 
-for textures to add an image you put a png into the assets folders and then you 
+for textures to add an image you put a png into the assets folders and then you
 
-add in the init textures function 
+add in the init textures function
 
 Texture2D something = LoadTexture("./whatever.png");
 Textures.push_back(something)
@@ -34,6 +34,23 @@ ENDOFTEXTURES
 ENDOFTEXTURES
 
 
+WEAPONS
+WEAPONS
+WEAPONS
+
+
+AvailableWeapons is different from weapon_slots.
+
+weapon_slots is the weapons currently equipped by the player
+
+AvailableWeapons is a list of all the weapons in the game that the game can choose from
+
+for giving weapons to the player and other purposes
+
+
+ENDOFWEAPONS
+ENDOFWEAPONS
+ENDOFWEAPONS
 
 
 

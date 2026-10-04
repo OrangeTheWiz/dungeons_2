@@ -4,4 +4,4 @@
 
 
 // MAXIMUM 3
-std::vector<weapon> weapon_slots;
+extern std::vector<weapon> weapon_slots;

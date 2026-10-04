@@ -3,8 +3,10 @@
 #include <vector>
 #include <iostream>
 
+std::vector<weapon> weapon_slots;
+std::vector<weapon> AvailableWeapons;
 
-void WeaponSlotsInitalization()
+void WeaponsInit()
 {
     weapon Dagger;
     Dagger.Attack = []()
@@ -13,6 +15,8 @@ void WeaponSlotsInitalization()
     };
 
     Dagger.PositionInTextures = 0;
+
+   AvailableWeapons.push_back(Dagger);
 
    weapon_slots.push_back(Dagger);
    weapon_slots.push_back(Dagger);
