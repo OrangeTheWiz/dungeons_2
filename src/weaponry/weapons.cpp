@@ -3,7 +3,6 @@
 #include <vector>
 #include <iostream>
 
-std::vector<weapon> weapon_slots;
 std::vector<weapon> AvailableWeapons;
 
 void WeaponsInit()

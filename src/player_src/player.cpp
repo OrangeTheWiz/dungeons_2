@@ -15,9 +15,13 @@ void PlayerMovement()
  if (IsKeyDown(KEY_D)) { RelativeX += PlayerSpeed * GetFrameTime(); }
 
  if (RelativeX >= 700) { RelativeX = 0; ChunkX += 1; }
- if (RelativeX <= -1) { RelativeX = 500; ChunkX -= 1; }
+ if (RelativeX <= -1) { RelativeX = 700; ChunkX -= 1; }
  if (RelativeY >= 700) { RelativeY = 0; ChunkY += 1; }
- if (RelativeY <= -1) { RelativeY = 500; ChunkY -= 1; }
+ if (RelativeY <= -1) { RelativeY = 700; ChunkY -= 1; }
+
+ LOCATION = ChunkCoordinatesToString(ChunkX, ChunkY);
+
+ DrawRectangle(RelativeX, RelativeY, 25, 25, RED);
 
  SnapToValidChunks();
 

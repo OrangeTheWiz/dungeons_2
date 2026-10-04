@@ -2,6 +2,8 @@ TEXTURES
 TEXTURES
 TEXTURES
 
+Textures is the vector in which all textures are stored in the gaame (for now)
+
 for textures to add an image you put a png into the assets folders and then you
 
 add in the init textures function
