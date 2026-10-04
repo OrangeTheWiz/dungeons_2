@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include "weaponry/weapons.h"
+#include "../weaponry/weapons.h"
 
 
 // MAXIMUM 3
