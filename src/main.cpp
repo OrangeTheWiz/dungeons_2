@@ -14,14 +14,18 @@
 
 int main()
 {
-   InitTextures();
+
+   InitWindow(700, 700, "Dungeons 2");
+
+   SetTargetFPS(60);
+
    WeaponsInit();
    InitWeaponSlotsRectangles();
 
    GenerateRoom();
 
-   InitWindow(700, 700, "Dungeons 2");
-   SetTargetFPS(60);
+   InitTextures();
+
 
    while (!WindowShouldClose())
    {
@@ -31,6 +35,7 @@ int main()
        PlayerMovement();
 
        InventoryUpdateLoop();
+
 
        EndDrawing();
    }

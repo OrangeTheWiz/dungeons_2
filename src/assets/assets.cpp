@@ -13,17 +13,11 @@ void InitTextures()
 {
 
   // initalize textures
-  Texture2D Dagger = LoadTexture("./dagger.png");
-  
-
-  // add them into the Textures vector for external use 
-  Textures.push_back(Dagger);
+  Textures.push_back(LoadTexture("assets/dagger.png"));
 
 
 
 
-  // deinizalize textures within InitTextures's scope.
-  UnloadTexture(Dagger);
 }
 
 
