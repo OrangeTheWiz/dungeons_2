@@ -14,8 +14,8 @@ void InitWeaponSlotsRectangles()
 {
 
    WeaponSlotsRectangles.push_back({0, 0, 50.0, 50.0});
+   WeaponSlotsRectangles.push_back({50, 0, 50.0, 50.0});
    WeaponSlotsRectangles.push_back({100, 0, 50.0, 50.0});
-   WeaponSlotsRectangles.push_back({200, 0, 50.0, 50.0});
 
 }
 
@@ -43,17 +43,15 @@ void InventoryUpdateLoop()
    {
      if (SelectedWeaponSlot == i)
      {
-         Rectangle LateRenderingTextureRectangle = {WeaponSlotsRectangles[i].x, WeaponSlotsRectangles[i].y, 50.0, 50.0};
 
          DrawRectangle(WeaponSlotsRectangles[i].x, WeaponSlotsRectangles[i].y, WeaponSlotsRectangles[i].width, WeaponSlotsRectangles[i].height, RED);
-         DrawTexturePro(Textures[weapon_slots[i].PositionInTextures], {WeaponSlotsRectangles[i].x, WeaponSlotsRectangles[i].y, 100.0, 100.0}, LateRenderingTextureRectangle,  {0, 0}, 0.0, WHITE);
+         DrawTextureEx(Textures[weapon_slots[i].PositionInTextures], {WeaponSlotsRectangles[i].x, WeaponSlotsRectangles[i].y}, 0.0, 0.5, WHITE);
      }
      else
      {
-       Rectangle LateRenderingTextureRectangle = {WeaponSlotsRectangles[i].x, WeaponSlotsRectangles[i].y, 50.0, 50.0};
 
        DrawRectangle(WeaponSlotsRectangles[i].x, WeaponSlotsRectangles[i].y, WeaponSlotsRectangles[i].width, WeaponSlotsRectangles[i].height, BLUE);
-       DrawTexturePro(Textures[weapon_slots[i].PositionInTextures], {WeaponSlotsRectangles[i].x, WeaponSlotsRectangles[i].y, 100.0, 100.0}, LateRenderingTextureRectangle, {0, 0}, 0.0, WHITE);
+       DrawTextureEx(Textures[weapon_slots[i].PositionInTextures], {WeaponSlotsRectangles[i].x, WeaponSlotsRectangles[i].y}, 0.0, 0.5, WHITE);
      }
 
    }
