@@ -7,7 +7,11 @@
 #include "weaponry/weapons.h"
 
 
+#if defined(PLATFORM_WEB)
+    #include <emscripten/emscripten.h>
+#endif
 
+void UpdateDrawFrame(void);
 
 
 
@@ -17,19 +21,43 @@ int main()
 
    InitWindow(700, 700, "Dungeons 2");
 
-   SetTargetFPS(60);
+  #if defined(PLATFORM_WEB)
+     emscripten_set_main_loop(UpdateDrawFrame, 0, 1);
+  #else
 
-   WeaponsInit();
-   InitWeaponSlotsRectangles();
+   
+    SetTargetFPS(60);
 
-   GenerateRoom();
+    WeaponsInit();
+   
+    InitWeaponSlotsRectangles();
 
-   InitTextures();
+    GenerateRoom();
+
+    InitTextures();
+
+    while (!WindowShouldClose())
+    {
+      UpdateDrawFrame();
+    }
+
+  #endif
+   DeInitTextures();
+
+   CloseWindow();
 
 
-   while (!WindowShouldClose())
-   {
+
+  return 0;
+
+}
+
+
+void UpdateDrawFrame(void)
+{
+
        BeginDrawing();
+       
        ClearBackground(GREEN);
 
        PlayerMovement();
@@ -38,14 +66,5 @@ int main()
 
 
        EndDrawing();
-   }
-
-   DeInitTextures();
-
-   CloseWindow();
-
-
-
-  return 0;
 
 }
