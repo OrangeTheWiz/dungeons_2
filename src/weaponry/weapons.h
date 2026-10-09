@@ -13,7 +13,7 @@ struct weapon
   // that x instance of the weapon struct has (so an index) in the textures vector
   int PositionInTextures;
 
-  std::function<void()> Attack;
+  std::function<void(weapon*)> Attack;
 };
 
 

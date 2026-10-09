@@ -58,7 +58,7 @@ void InventoryUpdateLoop()
 
    if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
    {
-     weapon_slots[SelectedWeaponSlot].Attack();
+     weapon_slots[SelectedWeaponSlot].Attack(&weapon_slots[SelectedWeaponSlot]);
    }
 
 
