@@ -14,8 +14,9 @@ void WeaponsInit()
     Dagger.PositionInTextures = 0;
 
 
-    Dagger.Attack = [](weapon* DaggerPointer)
+    Dagger.Attack = [](weapon *DaggerPointer)
     {
+
      std::cout << DaggerPointer->PositionInTextures << '\n';
      std::cout << "OoOohHH sword attack so scary aaaaaaaa\n";
     };
