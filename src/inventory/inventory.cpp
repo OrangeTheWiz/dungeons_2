@@ -41,6 +41,8 @@ void InventoryUpdateLoop()
    // 2 here because WeaponSlotRectangles has 3 elements vectors use zero based indexing
    for (int i = 0; i <= 2; i++)
    {
+
+     weapon_slots[i].Update(&weapon_slots[i]);
      if (SelectedWeaponSlot == i)
      {
 
