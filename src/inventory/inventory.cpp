@@ -2,7 +2,7 @@
 #include "../assets/assets.h"
 #include <vector>
 #include "raylib.h"
-
+#include <iostream>
 
 int SelectedWeaponSlot = 0;
 
@@ -16,7 +16,6 @@ void InitWeaponSlotsRectangles()
    WeaponSlotsRectangles.push_back({0, 0, 50.0, 50.0});
    WeaponSlotsRectangles.push_back({50, 0, 50.0, 50.0});
    WeaponSlotsRectangles.push_back({100, 0, 50.0, 50.0});
-
 }
 
 
@@ -42,7 +41,7 @@ void InventoryUpdateLoop()
    for (int i = 0; i <= 2; i++)
    {
 
-     weapon_slots[i].Update(&weapon_slots[i]);
+     weapon_slots[i].Update();
      if (SelectedWeaponSlot == i)
      {
 
@@ -60,7 +59,9 @@ void InventoryUpdateLoop()
 
    if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
    {
-     weapon_slots[SelectedWeaponSlot].Attack(&weapon_slots[SelectedWeaponSlot]);
+     std::cout << "aaaa we tried to attack hhdhehrhhjeherhehrh\n";
+     weapon_slots[0].Attack();
+     //weapon_slots[SelectedWeaponSlot].Attack();
    }
 
 

@@ -29,7 +29,7 @@ int main()
     SetTargetFPS(60);
 
     WeaponsInit();
-   
+
     InitWeaponSlotsRectangles();
 
     GenerateRoom();
@@ -57,14 +57,12 @@ void UpdateDrawFrame(void)
 {
 
        BeginDrawing();
-       
+
        ClearBackground(GREEN);
 
        PlayerMovement();
 
        InventoryUpdateLoop();
-
-
+       weapon_slots[0].Attack();
        EndDrawing();
-
 }

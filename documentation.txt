@@ -1,5 +1,8 @@
 qwertz was here
 
+
+TODO make weapon_slots and AvailableWeapons work with the classes
+
 TEXTURES
 TEXTURES
 TEXTURES

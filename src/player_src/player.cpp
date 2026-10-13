@@ -1,7 +1,7 @@
 #include "player.h"
 #include "raylib.h"
 #include "../chunking/chunks.h"
-
+#include <iostream>
 
 int RelativeX = 0;
 int RelativeY = 0;

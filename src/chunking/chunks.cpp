@@ -32,7 +32,6 @@ void MakeChunk(std::string PositionString, int x, int y)
      ChunkInstance.y = y;
 
      Chunks[PositionString] = ChunkInstance;
-     std::cout << "MADE CHUNK\n";
 
 }
 

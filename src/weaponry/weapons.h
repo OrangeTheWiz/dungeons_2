@@ -5,19 +5,18 @@
 
 extern void WeaponsInit();
 
-struct weapon
+class weapon
 {
 
+  public:
+   // position in textures refers to the index
+   // that x instance of the weapon class has (so an index) in the textures vector
+   int PositionInTextures;
+   bool IsAttacking;
 
-  // position in textures refers to the index
-  // that x instance of the weapon struct has (so an index) in the textures vector
-  int PositionInTextures;
-  bool IsAttacking;
-  Vector2 Position;
+   virtual void Attack() {}
+   virtual void Update() {}
 
-
-  std::function<void(weapon*)> Attack;
-  std::function<void(weapon*)> Update;
 };
 
 
@@ -26,3 +25,5 @@ struct weapon
 // AvailableWeapons is that somewhere.
 
 extern std::vector<weapon> AvailableWeapons;
+
+

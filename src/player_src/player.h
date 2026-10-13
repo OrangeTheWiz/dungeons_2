@@ -1,4 +1,4 @@
-
+#pragma once
 
 extern int RelativeX;
 extern int RelativeY;
