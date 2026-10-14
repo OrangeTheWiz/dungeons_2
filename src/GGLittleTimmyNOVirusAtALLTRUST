@@ -1,0 +1,40 @@
+#include "./GrassBlock.h"
+#include <iostream>
+#include "../../../../Utils/TextureLoader.h"
+#include "../../VoxelManger/Voxels.h"
+
+
+
+
+void GrassBlock::BlockInit()
+{
+
+    BlockName = "Grass";
+    BlockHp = 10;
+    Breakable = true;
+    Solid = true;
+    BlockTexture = TLOADER_GetTextureWithId("GrassBlockTexture");
+
+    UpdateTick = 1;
+    DoUpdates = true;
+    std::cout << "grass\n";
+
+
+
+    
+
+}
+void GrassBlock::BlockUpdate()
+{
+
+   BlockRot++;
+}
+
+void GrassBlock::BlockBreak()
+{
+ 
+    std::cout << "GrassBlock Broken\n";
+}
+
+
+trust gg
