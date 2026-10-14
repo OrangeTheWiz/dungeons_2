@@ -1,6 +1,10 @@
 qwertz was here
 
 
+c++ is the best lang of all time
+and c and asm
+
+
 TODO make weapon_slots and AvailableWeapons work with the classes
 
 TEXTURES
