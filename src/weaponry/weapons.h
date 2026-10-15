@@ -2,6 +2,8 @@
 #include <functional>
 #include <vector>
 #include "raylib.h"
+#include <memory>
+
 
 extern void WeaponsInit();
 
@@ -24,6 +26,12 @@ class weapon
 // spawns in items in a loot crate and the game needs somewhere to choose weapons from.
 // AvailableWeapons is that somewhere.
 
-extern std::vector<weapon> AvailableWeapons;
+extern std::vector<std::unique_ptr<weapon>> AvailableWeapons;
 
 
+template<typename T>
+std::unique_ptr<weapon> WeaponMakerHelper(const T& WeaponArg)
+{
+   auto NewWeapon = std::make_unique<T>(WeaponArg);
+   return NewWeapon;
+}

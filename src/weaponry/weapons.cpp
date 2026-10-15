@@ -3,7 +3,7 @@
 #include <vector>
 #include "./dagger.h"
 
-std::vector<weapon> AvailableWeapons;
+std::vector<std::unique_ptr<weapon>> AvailableWeapons;
 
 
 void WeaponsInit()

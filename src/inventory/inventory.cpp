@@ -6,7 +6,7 @@
 
 int SelectedWeaponSlot = 0;
 
-std::vector<weapon> weapon_slots;
+std::vector<std::unique_ptr<weapon>> weapon_slots;
 
 std::vector<Rectangle> WeaponSlotsRectangles;
 
@@ -41,18 +41,18 @@ void InventoryUpdateLoop()
    for (int i = 0; i <= 2; i++)
    {
 
-     weapon_slots[i].Update();
+     weapon_slots[i]->Update();
      if (SelectedWeaponSlot == i)
      {
 
          DrawRectangle(WeaponSlotsRectangles[i].x, WeaponSlotsRectangles[i].y, WeaponSlotsRectangles[i].width, WeaponSlotsRectangles[i].height, RED);
-         DrawTextureEx(Textures[weapon_slots[i].PositionInTextures], {WeaponSlotsRectangles[i].x, WeaponSlotsRectangles[i].y}, 0.0, 0.5, WHITE);
+         DrawTextureEx(Textures[weapon_slots[i]->PositionInTextures], {WeaponSlotsRectangles[i].x, WeaponSlotsRectangles[i].y}, 0.0, 0.5, WHITE);
      }
      else
      {
 
        DrawRectangle(WeaponSlotsRectangles[i].x, WeaponSlotsRectangles[i].y, WeaponSlotsRectangles[i].width, WeaponSlotsRectangles[i].height, BLUE);
-       DrawTextureEx(Textures[weapon_slots[i].PositionInTextures], {WeaponSlotsRectangles[i].x, WeaponSlotsRectangles[i].y}, 0.0, 0.5, WHITE);
+       DrawTextureEx(Textures[weapon_slots[i]->PositionInTextures], {WeaponSlotsRectangles[i].x, WeaponSlotsRectangles[i].y}, 0.0, 0.5, WHITE);
      }
 
    }
@@ -60,8 +60,7 @@ void InventoryUpdateLoop()
    if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
    {
      std::cout << "aaaa we tried to attack hhdhehrhhjeherhehrh\n";
-     weapon_slots[0].Attack();
-     //weapon_slots[SelectedWeaponSlot].Attack();
+     weapon_slots[SelectedWeaponSlot]->Attack();
    }
 
 

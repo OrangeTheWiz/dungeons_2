@@ -63,6 +63,6 @@ void UpdateDrawFrame(void)
        PlayerMovement();
 
        InventoryUpdateLoop();
-       weapon_slots[0].Attack();
+
        EndDrawing();
 }

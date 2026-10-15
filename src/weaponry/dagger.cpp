@@ -15,10 +15,6 @@ void Dagger::Attack()
       Position.y = RelativeY;
 
       IsAttacking = true;
-      for (int i = 0; i < 100; i++)
-      {
-         std::cout << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n";
-      }
 }
 
 
@@ -48,6 +44,8 @@ void something()
  std::cout << "something\n";
 }
 
+
+
 void InitalizeDagger()
 {
 
@@ -55,13 +53,15 @@ void InitalizeDagger()
 
 
  dagger.PositionInTextures = 0;
- dagger.IsAttacking = false; 
+ dagger.IsAttacking = false;
 
  dagger.Position = {0.0, 0.0};
- AvailableWeapons.push_back(dagger);
+ 
+ AvailableWeapons.push_back(std::move(std::make_unique<Dagger>(dagger)));
 
- weapon_slots.push_back(dagger);
- weapon_slots.push_back(dagger);
- weapon_slots.push_back(dagger);
+ // this is bc this is the first init function called and it needs to fill the weapon slots
+ weapon_slots.push_back(std::move(std::make_unique<Dagger>(dagger)));
+ weapon_slots.push_back(std::move(std::make_unique<Dagger>(dagger)));
+ weapon_slots.push_back(std::move(std::make_unique<Dagger>(dagger)));
 
 }
