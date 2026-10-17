@@ -20,4 +20,3 @@ class Dagger : public weapon
 
 
 };
-extern void InitalizeDagger();

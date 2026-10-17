@@ -5,6 +5,7 @@
 
 std::vector<std::unique_ptr<weapon>> AvailableWeapons;
 
+void InitalizeDagger();
 
 void WeaponsInit()
 {

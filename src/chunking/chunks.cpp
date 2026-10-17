@@ -75,8 +75,8 @@ void GenerateRoom()
 void ChunkInfoDisplay()
 {
 
-  std::cout << Chunks[LOCATION].number << '\n';
-   std::string num_value = std::to_string(Chunks[LOCATION].number);
+ //  std::cout << Chunks[LOCATION].number << '\n';
+    std::string num_value = std::to_string(Chunks[LOCATION].number);
     const char* num_value_two = num_value.c_str();
     DrawText(num_value_two, 350, 350, 25, RED);
 
