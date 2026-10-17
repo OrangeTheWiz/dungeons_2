@@ -22,7 +22,6 @@ void PlayerMovement()
  LOCATION = ChunkCoordinatesToString(ChunkX, ChunkY);
 
  DrawRectangle(RelativeX, RelativeY, 25, 25, RED);
-
+ 
  SnapToValidChunks();
-
 }

@@ -80,9 +80,9 @@ void ChunkInfoDisplay()
     const char* num_value_two = num_value.c_str();
     DrawText(num_value_two, 350, 350, 25, RED);
 
-    DrawText("ChunkX position: ", 0, 0, 25, RED);
+    DrawText("x", 250, 0, 25, RED);
     DrawText(std::to_string(ChunkX).c_str(), 220, 0, 25, RED);
 
-   DrawText("ChunkY position: ", 0, 50, 25, RED);
-    DrawText(std::to_string(ChunkY).c_str(), 220, 50, 25, RED);
+    DrawText("y", 300, 0, 25, RED);
+    DrawText(std::to_string(ChunkY).c_str(), 270, 0, 25, RED);
 }

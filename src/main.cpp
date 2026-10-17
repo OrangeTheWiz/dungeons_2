@@ -61,8 +61,11 @@ void UpdateDrawFrame(void)
        ClearBackground(GREEN);
 
        PlayerMovement();
+       SnapToValidChunks();
 
        InventoryUpdateLoop();
+
+       ChunkInfoDisplay();
 
        EndDrawing();
 }
