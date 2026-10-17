@@ -39,10 +39,6 @@ void Dagger::Update()
 
 }
 
-void something()
-{
- std::cout << "something\n";
-}
 
 
 
@@ -51,7 +47,7 @@ void InitalizeDagger()
 
  Dagger dagger;
 
-
+ dagger.Rect = {0.0, 0.0, 50, 50};
  dagger.PositionInTextures = 0;
  dagger.IsAttacking = false;
 
